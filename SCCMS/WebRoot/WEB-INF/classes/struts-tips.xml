@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+ <struts>
+ 	<package name="tips" namespace="/tips" 
+ 			extends="json-default">
+ 			
+ 		<action name="tipsList" class="com.changh.sccms.action.tips.TipsListAction">
+			<result name="success" type="json">
+				 <param name="root">map</param>
+			</result>
+		</action>	
+		<action name="loadTips" class="com.changh.sccms.action.tips.LoadTipsAction">
+			<result name="success" >/cms/jsp/tips/addTips.jsp
+			</result>
+		</action>	
+		<action name="addOrUpdate" class="com.changh.sccms.action.tips.AddOrUpdateTipsAction">
+			<result name="success" type="json">
+				 <param name="root">ok</param>
+			</result>
+		</action>
+		<action name="deleteTips" class="com.changh.sccms.action.tips.DeleteTipsAction">
+			<result name="success" type="json">
+				 <param name="root">ok</param>
+			</result>
+		</action>		
+ 	</package>
+ </struts>
